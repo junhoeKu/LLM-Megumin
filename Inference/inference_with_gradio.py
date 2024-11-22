@@ -121,7 +121,7 @@ interface = gr.Interface(
     title="Megumin Chatbot",  ## UI 제목
     description="Enter a prompt and get a response from the fine-tuned Megumin model.",  ## 설명
 )
-
+ 
 ## Gradio 앱 실행
 if __name__ == "__main__":
     interface.launch(share = True)  ## 웹 인터페이스 실행
