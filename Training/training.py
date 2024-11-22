@@ -2,10 +2,10 @@
 
 import torch
 import random
-from torch.cuda.amp import autocast
+from torch.cuda.amp import autocast 
 from datasets import Dataset
 from transformers import AutoTokenizer, AutoModelForCausalLM, TrainingArguments, Trainer, DataCollatorForLanguageModeling, BitsAndBytesConfig, EarlyStoppingCallback
-from peft import get_peft_model, LoraConfig, TaskType, PrefixTuningConfig
+from peft import get_peft_model, LoraConfig, TaskType
 from data_loader import load_megumin_dialogues_to_blessing, load_megumin_dialogues_to_flame, load_megumin_qa_dialogues
 
 ## Early stopping callback 정의
