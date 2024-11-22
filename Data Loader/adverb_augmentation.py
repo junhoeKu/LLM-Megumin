@@ -11,7 +11,7 @@ class AdverbAugmentation():
         self.kiwi = Kiwi()
         self.spacing = Spacer().space
     def _adverb_detector(self, sentence):
-
+ 
         # POS info
         pos_list = [(x[0], x[1]) for x in self.kiwi.tokenize(sentence)] # (token, pos)
         
