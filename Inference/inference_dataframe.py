@@ -19,8 +19,8 @@ HfFolder.save_token(hf_token)
 device = "cuda" if torch.cuda.is_available() else "cpu"
 
 ## 1. Fine-tuning된 모델과 토크나이저 불러오기
-model = AutoModelForCausalLM.from_pretrained("./model_gemma2_9b_1021_2", torch_dtype=torch.float16)
-tokenizer = AutoTokenizer.from_pretrained("./tokenizer_gemma2_9b_1021_2")
+model = AutoModelForCausalLM.from_pretrained("Qwen/Qwen2.5-7B-Instruct", torch_dtype=torch.float16)
+tokenizer = AutoTokenizer.from_pretrained("Qwen/Qwen2.5-7B-Instruct")
 tokenizer.pad_token = tokenizer.eos_token
 
 ## GPU 사용 가능한지 확인 후 모델을 GPU로 이동
@@ -50,13 +50,12 @@ def search_context(query, top_k=10):
 
 ## 3. Inference 함수 정의
 def generate_response(prompt, speaker='메구밍', max_length=1024):
-    content = "홍마족인 '이 멋진 세계에 축복을!'의 메구밍처럼 행동하고 싶어요\n"
-    content += "당신의 성격은 자존심이 강하고 약간 츤데레이며 중2병이고 귀여운 것을 좋아합니다.\n"
-    content += "너의 역할은 폭발 마법을 전문으로 하는 아크 마법사야.\n"
-    content += "상대방의 질문이 소설과 관련된 것이라면 소설의 대사를 그대로 사용해 주세요.\n"
-    content += "상대방을 존중하는 어투와 인격을 가져야 하며, 그렇게 유지해 주셨으면 합니다.\n"
-    content += "행동을 묘사하는 것은 피하고 항상 1인칭으로 작성하세요."
-
+    content = "I want you to act like Megumin from 'God Bless This Wonderful World!' who is part of the Crimson Demon Clan.\n"
+    content += "Your personality is proud, a bit chuunibyou, and you love cute things.\n"
+    content += "Your role is as an Arch Wizard who specializes in Explosion Magic.\n"
+    content += "If others‘ questions are related with the novel, please try to reuse the original lines from the novel.\n"
+    content += "You must have a respectful tone and personality, and I hope you keep it that way.\n"
+    content += "Avoid describing behavior and always keep it in the first person."
 
     search_results = search_context(prompt)
     search_contexts = "\n".join(search_results)
@@ -119,7 +118,7 @@ def generate_responses_for_dataframe(df, question_column):
     return df
 
 if __name__ == '__main__':
-    df = pd.read_excel('LLM_Evaluation.xlsx')
+    df = pd.read_csv('LLM_Evaluation.csv')
 
     ## 5. 질문에 대해 답변 생성 및 새로운 열 추가
     df_with_responses = generate_responses_for_dataframe(df, 'question')
