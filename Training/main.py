@@ -8,7 +8,7 @@ from data_loader import load_megumin_dialogues_to_blessing, load_megumin_dialogu
 
 
 if __name__ == "__main__":
-    wandb.login(key="15f21c20fccb0099e4a274798c7c257ccc39988a")
+    wandb.login(key="")
     with open('Json_Data/augmented_data.json', 'r', encoding='utf-8') as f:
         data = json.load(f)
 
