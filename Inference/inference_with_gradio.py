@@ -9,7 +9,7 @@ import os
 import torch
 
 # Hugging Face 토큰
-hf_token = "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"
+hf_token = ""
 os.environ["HUGGINGFACE_TOKEN"] = hf_token
 HfFolder.save_token(hf_token)
 
