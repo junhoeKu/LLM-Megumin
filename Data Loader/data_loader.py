@@ -232,7 +232,7 @@ def extract_github_dialogues(file_path):
 def save_dialogues_as_json(dialogues, output_path):
     with open(output_path, 'w', encoding='utf-8') as f:
         json.dump(dialogues, f, ensure_ascii=False, indent=4)
-
+  
 if __name__ == '__main__':
     blessing_directory_path = "Json_Data/blessing_folder"
     flame_directory_path = "Json_Data/flame_dialogue.json"
