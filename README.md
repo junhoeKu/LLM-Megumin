@@ -30,7 +30,7 @@
   - 영어 및 한국어 대화 지원
 
 ## 🎯 주요 성과
-<img src="VET_외이염.png" alt="Inference_외이염" width="600"/>
+<img src="Picture Folder/메구밍답변1_스토리질문.png" alt="Inference_스토리질문" width="750"/>
 - **메구밍의 재현성**  
   - 대화 맥락 정확도: **90% 이상**
   - 메구밍 특유의 말투 반영률: **95%**
