@@ -1,5 +1,5 @@
 # ✨ Megumin Persona LLM
-
+<img src="Picture Folder/메구밍사진.png" alt="Inference_스토리질문" width="750"/>
 ## 🔍 프로젝트 소개
 **Megumin Persona LLM**은 애니메이션 **'이 멋진 세계에 축복을!'** 의 캐릭터 **메구밍**의 말투와 성격을 완벽히 재현한 AI 모델입니다.
 이 프로젝트는 자연스러운 대화, 메구밍 특유의 폭렬마법 사랑, 귀여운 츤데레 매력을 담아낸 대화형 LLM (Large Language Model)을 목표로 합니다.
