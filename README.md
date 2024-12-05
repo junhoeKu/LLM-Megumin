@@ -18,7 +18,7 @@
 
 ## 🤖 모델 관련
 - **모델 구조**
-  - Pre-trained Qwen 기반 모델 사용(Qwen/Qwen2.5-7B-Instruct)
+  - Pre-trained Qwen 기반 모델 사용([Qwen/Qwen2.5-7B-Instruct](https://huggingface.co/Qwen/Qwen2.5-7B-Instruct))
   - QLoRA를 활용해 메모리 효율적 파인튜닝 진행
 
 - **훈련 전략**  
