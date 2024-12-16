@@ -5,11 +5,12 @@ from sentence_transformers import SentenceTransformer
 from huggingface_hub import HfApi, HfFolder
 from tqdm import tqdm
 import pandas as pd
-import faiss
 import gradio as gr
 import pickle
-import os
+import openai
 import torch
+import faiss
+import os
 
 hf_token = ""
 os.environ["HUGGINGFACE_TOKEN"] = hf_token
