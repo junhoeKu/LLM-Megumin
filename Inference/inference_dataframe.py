@@ -121,8 +121,7 @@ def generate_responses_for_dataframe(df, question_column):
                 messages=[
                     {"role": "system", "content": f"Paraphrase the user's text into Korean according to **Megumin's** personality.\nUser:{response}"},
                     {"role": "user", "content": f"it's time to answer 'Megumin'\nMegumin must always uses Respectful comments and honorifics."}])
-        
-        responses.append(response)
+        responses.append(completion.choices[0].message.content)
     
     # 새로운 열에 답변 저장
     df['response'] = responses
