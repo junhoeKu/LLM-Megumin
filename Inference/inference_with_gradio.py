@@ -2,11 +2,11 @@ from transformers import AutoTokenizer, AutoModelForCausalLM, AutoModelForSeq2Se
 from sentence_transformers import SentenceTransformer
 from deep_translator import GoogleTranslator
 from huggingface_hub import HfApi, HfFolder
-import faiss
 import gradio as gr
 import pickle
-import os
+import faiss
 import torch
+import os
 
 # Hugging Face 토큰
 hf_token = ""
