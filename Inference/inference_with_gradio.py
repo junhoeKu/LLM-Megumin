@@ -4,11 +4,12 @@ from deep_translator import GoogleTranslator
 from huggingface_hub import HfApi, HfFolder
 import gradio as gr
 import pickle
+import openai
 import faiss
 import torch
 import os
 
-# Hugging Face 토큰
+## Hugging Face 토큰 인증
 hf_token = ""
 os.environ["HUGGINGFACE_TOKEN"] = hf_token
 HfFolder.save_token(hf_token)
