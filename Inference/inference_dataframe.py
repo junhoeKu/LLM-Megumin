@@ -116,6 +116,12 @@ def generate_responses_for_dataframe(df, question_column):
     responses = []
     for question in tqdm(df[question_column], desc="Generating Responses", unit="question"):
         response = generate_response(question)  ## 모델로 답변 생성
+            completion = client.chat.completions.create(
+                model="gpt-4o",
+                messages=[
+                    {"role": "system", "content": f"Paraphrase the user's text into Korean according to **Megumin's** personality.\nUser:{response}"},
+                    {"role": "user", "content": f"it's time to answer 'Megumin'\nMegumin must always uses Respectful comments and honorifics."}])
+        
         responses.append(response)
     
     # 새로운 열에 답변 저장
