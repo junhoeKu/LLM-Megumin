@@ -20,7 +20,6 @@ HfFolder.save_token(hf_token)
 ## OpenAI 토큰 인증
 client = openai.OpenAI(api_key = '')
 
-
 ## GPU 사용 가능한지 확인 후 모델을 GPU로 이동
 device = "cuda" if torch.cuda.is_available() else "cpu"
 
@@ -32,7 +31,6 @@ tokenizer.pad_token = tokenizer.eos_token
 ## GPU 사용 가능한지 확인 후 모델을 GPU로 이동
 device = "cuda" if torch.cuda.is_available() else "cpu"
 model.to(device)
-
 
 ## 텍스트 임베딩 모델 로드 (RAG에서 사용)
 embedder = SentenceTransformer('all-MiniLM-L12-v2')
