@@ -114,7 +114,15 @@ def chat_with_model(prompt, speaker='Megumin'):
     keyword_indices = [i for i in range(len(response)) if response.startswith(keyword, i)]
     if len(keyword_indices) >= 2:  # 'model'이 두 번 이상 등장하는 경우
         response = response[keyword_indices[1] + len(keyword):].replace('\n', '').strip()
-    return response
+    completion = client.chat.completions.create(
+    model="gpt-4o",
+    messages=[
+        {"role": "system", "content": f"Paraphrase the user's text into Korean according to **Megumin's** personality.\nUser:{response}"},
+        {"role": "user", "content": f"it's time to answer 'Megumin'\nMegumin must always uses Respectful comments and honorifics."}]) # completion.choices[0].message.content
+    
+    ko_response = completion.choices[0].message.content
+
+    return ko_response
 
 ## Gradio 인터페이스 생성
 interface = gr.Interface(
