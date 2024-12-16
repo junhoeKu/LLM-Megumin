@@ -13,6 +13,9 @@ hf_token = ""
 os.environ["HUGGINGFACE_TOKEN"] = hf_token
 HfFolder.save_token(hf_token)
 
+## OpenAI 토큰 인증
+client = openai.OpenAI(api_key = '')
+
 ## 1. Fine-tuning된 모델과 토크나이저 불러오기
 model = AutoModelForCausalLM.from_pretrained("google/gemma-2-9b-it", torch_dtype=torch.float16)
 tokenizer = AutoTokenizer.from_pretrained("google/gemma-2-9b-it")
