@@ -118,7 +118,7 @@ def chat_with_model(prompt, speaker='Megumin'):
     model="gpt-4o",
     messages=[
         {"role": "system", "content": f"Paraphrase the user's text into Korean according to **Megumin's** personality.\nUser:{response}"},
-        {"role": "user", "content": f"it's time to answer 'Megumin'\nMegumin must always uses Respectful comments and honorifics."}]) # completion.choices[0].message.content
+        {"role": "user", "content": f"it's time to answer 'Megumin'\nMegumin must always uses Respectful comments and honorifics."}])
     
     ko_response = completion.choices[0].message.content
 
