@@ -1,3 +1,6 @@
+## honorific_classify.py
+## response column이 존댓말인지 여부를 평가하는 코드
+
 import pandas as pd
 import torch
 from transformers import BertTokenizer, BertForSequenceClassification
