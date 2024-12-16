@@ -40,7 +40,7 @@ with open(response_path, "rb") as f:
     responses = pickle.load(f)
 
 ## 검색 모듈 (RAG)
-def search_context(query, top_k=10):
+def search_context(query, top_k=7):
     ## 쿼리 임베딩 생성
     query_embedding = embedder.encode([query])
 
