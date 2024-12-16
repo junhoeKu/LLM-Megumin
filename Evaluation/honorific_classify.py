@@ -19,7 +19,8 @@ df = pd.read_excel("responses.xlsx")
 
 ## 3. 존댓말 판단 함수
 def classify_honorific(sentence):
-    inputs = tokenizer(sentence, return_tensors="pt", padding=True, truncation=True, max_length=128).to(device)
+    sentence = sentence.split('.')[0] if isinstance(sentence, str) else ""
+    inputs = tokenizer(sentence, return_tensors="pt", padding=True, truncation=True, max_length=300).to(device)
     with torch.no_grad():
         outputs = model(**inputs)
     logits = outputs.logits
@@ -31,3 +32,4 @@ df['is_honorific'] = df['response'].apply(lambda x: classify_honorific(x) if isi
 
 ## 5. 결과 저장
 df.to_excel("responses.xlsx", index=False)
+print('존댓말 컬럼이 생성 완료 되었습니다.')
