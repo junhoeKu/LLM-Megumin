@@ -1,3 +1,6 @@
+## training_translation_model.py
+## 번역 모델을 메구밍처럼 번역하도록 학습시키는 코드
+
 from transformers import AutoTokenizer, AutoModelForSeq2SeqLM, Seq2SeqTrainer, Seq2SeqTrainingArguments
 from huggingface_hub import HfApi, HfFolder
 from datasets import Dataset
