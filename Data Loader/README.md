@@ -5,15 +5,9 @@
 - 데이터 수집 (Collecting Data)
 
 - 데이터 증강 (Augmenting Data)
-  - augment_english_data.py
-  - data_augmentation.py
-  - BERT_augmentation.py
-  - adverb_augmentation.py
 
 - 데이터 전처리 (Preprocessing Data)
 
 - 데이터 불러오기 (Loading Data)
-  - data_loader.py
 
 - 데이터 변환 (Converting data)
-  - json_to_rag.ipynb
