@@ -1,6 +1,6 @@
 ## evaluate_statistics.py
 ## 데이터의 정량적 정보를 조사하는 코드  
-
+  
 import json
 from collections import Counter
 from sentence_transformers import SentenceTransformer
