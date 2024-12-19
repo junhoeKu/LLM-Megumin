@@ -1,6 +1,6 @@
 ## augment_english_data.py
 ## 영어 데이터 증강하는 코드, 1) 임의의 부사 삽입 2) 문장 내 두 단어를 임의로 교체
-
+  
 import json
 import random
 import copy
