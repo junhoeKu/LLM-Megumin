@@ -6,6 +6,7 @@ import requests
 from kiwipiepy import Kiwi
 import time
 from quickspacer import Spacer
+
 class AdverbAugmentation():
     def __init__(self):
         self.kiwi = Kiwi()
