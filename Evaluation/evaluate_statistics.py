@@ -1,3 +1,6 @@
+## evaluate_statistics.py
+## 데이터의 통계적 정량 평가 코드
+
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
 from nltk.translate.bleu_score import sentence_bleu
 from rouge_score import rouge_scorer
