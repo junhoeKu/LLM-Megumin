@@ -1,9 +1,15 @@
-import pandas as pd
-from rouge_score import rouge_scorer
+from transformers import AutoTokenizer, AutoModelForSequenceClassification
 from nltk.translate.bleu_score import sentence_bleu
+from rouge_score import rouge_scorer
 from collections import Counter
-import math
 from itertools import islice
+import pandas as pd
+import math
+
+## 모델 및 토크나이저 로드
+model_name = "Elron/bleurt-base-512"
+tokenizer = AutoTokenizer.from_pretrained(model_name)
+model = AutoModelForSequenceClassification.from_pretrained(model_name)
 
 ## 데이터 로드
 answer = pd.read_csv('LLM_Evaluation.csv')[['category', 'question', 'answer']]
