@@ -1,6 +1,6 @@
 ## scraping_utils.py
 ## selenium 동적 크롤링 관련 코드입니다.
-
+  
 from selenium.webdriver.common.by import By
 import time
 
