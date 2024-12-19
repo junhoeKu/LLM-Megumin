@@ -19,7 +19,7 @@ import deepl
 from datetime import datetime
 
 ## Hugging Face 토큰
-hf_token = "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"
+hf_token = ""
 os.environ["HUGGINGFACE_TOKEN"] = hf_token
 HfFolder.save_token(hf_token)
 
@@ -49,13 +49,13 @@ qwen_model.to(device)
 roberta_model.to(device)
 
 ## 한글 질문 -> 영어 질문으로 번역 (Deepl api 사용)
-auth_key = '71f8283c-de4e-421d-bec9-2cee58feb83f:fx'
+auth_key = ''
 translator_input = deepl.Translator(auth_key)
 translator_output = deepl.Translator(auth_key)
 
 ## GPT API 사용
 import openai
-client = openai.OpenAI(api_key = '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')
+client = openai.OpenAI(api_key = '')
 
 ## 음성을 텍스트로 변환 (STT)
 def speech_to_text(audio_path=None):
