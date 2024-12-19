@@ -6,7 +6,7 @@ from scraping_utils import scroll_to_bottom, extract_post_urls
 from post_scraper import get_post_data
 from file_utils import save_to_json
 from tqdm import tqdm
-
+  
 def main():
     driver = setup_driver()
     
