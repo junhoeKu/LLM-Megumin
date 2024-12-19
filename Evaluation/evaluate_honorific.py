@@ -5,31 +5,34 @@ import pandas as pd
 import torch
 from transformers import BertTokenizer, BertForSequenceClassification
 
-## 1. 모델과 토크나이저 로드
-MODEL_NAME = "beomi/kcbert-base"
-tokenizer = BertTokenizer.from_pretrained(MODEL_NAME)
-model = BertForSequenceClassification.from_pretrained(MODEL_NAME, num_labels=2)
+## 모델 초기화 함수
+def initialize_model(model_name):
+    tokenizer = BertTokenizer.from_pretrained(model_name)
+    model = BertForSequenceClassification.from_pretrained(model_name, num_labels=2)
+    device = "cuda" if torch.cuda.is_available() else "cpu"
+    model.to(device)
+    model.eval()
+    return tokenizer, model, device
 
-device = "cuda" if torch.cuda.is_available() else "cpu"
-model.to(device)
-model.eval()
-
-## 2. 데이터 로드
-df = pd.read_excel("responses.xlsx")
-
-## 3. 존댓말 판단 함수
-def classify_honorific(sentence):
-    sentence = sentence.split('.')[0] if isinstance(sentence, str) else ""
-    inputs = tokenizer(sentence, return_tensors="pt", padding=True, truncation=True, max_length=300).to(device)
+## 존댓말 판단 함수
+def classify_honorific(sentence, tokenizer, model, device):
+    if not isinstance(sentence, str):
+        return 0
+    inputs = tokenizer(sentence.split('.')[0], return_tensors="pt", padding=True, truncation=True, max_length=300).to(device)
     with torch.no_grad():
         outputs = model(**inputs)
-    logits = outputs.logits
-    prediction = torch.argmax(logits, dim=-1).item()  ## 예측 결과 (0 or 1)
-    return prediction
+    return torch.argmax(outputs.logits, dim=-1).item()
 
-## 4. 존댓말 분류 후 새로운 컬럼 생성
-df['is_honorific'] = df['response'].apply(lambda x: classify_honorific(x) if isinstance(x, str) else 0)
+## 데이터 처리 함수
+def process_responses(input_file, output_file, model_name):
+    tokenizer, model, device = initialize_model(model_name)
+    df = pd.read_excel(input_file)
+    df['is_honorific'] = df['response'].apply(lambda x: classify_honorific(x, tokenizer, model, device))
+    df.to_excel(output_file, index=False)
+    print(f"존댓말 컬럼이 생성 완료되었습니다. 저장 경로: {output_file}")
 
-## 5. 결과 저장
-df.to_excel("responses.xlsx", index=False)
-print('존댓말 컬럼이 생성 완료 되었습니다.')
+if __name__ == "__main__":
+    MODEL_NAME = "beomi/kcbert-base"
+    INPUT_FILE = "responses.xlsx"
+    OUTPUT_FILE = "responses_with_honorifics.xlsx"
+    process_responses(INPUT_FILE, OUTPUT_FILE, MODEL_NAME)
