@@ -1,4 +1,4 @@
-## data_information.py
+## evaluate_statistics.py
 ## 데이터의 정량적 정보를 조사하는 코드  
 
 import json
