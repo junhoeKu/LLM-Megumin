@@ -1,6 +1,6 @@
 ## post_scraper.py
 ## 포스트 내에서 제목과 내용 추출하는 코드입니다.
-
+  
 from selenium.webdriver.common.by import By
 import time
 
