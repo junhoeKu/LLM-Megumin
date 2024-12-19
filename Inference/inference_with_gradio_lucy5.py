@@ -14,7 +14,7 @@ import deepl
 from datetime import datetime
 
 ## Hugging Face 토큰
-hf_token = "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"
+hf_token = ""
 os.environ["HUGGINGFACE_TOKEN"] = hf_token
 HfFolder.save_token(hf_token)
 
@@ -50,7 +50,7 @@ translator_output = deepl.Translator(auth_key)
 
 ## GPT API 사용
 import openai
-client = openai.OpenAI(api_key = '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')
+client = openai.OpenAI(api_key = '')
 
 ## 텍스트 임베딩 모델 로드 (RAG에서 사용)
 embedder = SentenceTransformer('all-MiniLM-L12-v2')
