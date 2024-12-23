@@ -47,18 +47,12 @@
   - 기존 LLM을 평가하는 벤치마크 데이터셋 참고
   - 자연어 추론, 인간성 등을 평가하고자 했고 특히 Role-Play Task에 중요한 복잡한 계산능력, HumanEval Benchmark 활용하여 평가
   - 평가 결과 : RAG 활용으로 캐릭터 페르소나를 유지하면서도 복잡한 질문에 원활히 답변, 최대한의 성능 유지
-<img src="Picture Folder/humaneval.png" alt="HumanEval Benchmark Score" width="750"/>
- 
+<img src="Picture Folder/humaneval.png" alt="HumanEval Benchmark Score" width="700"/>
+
+ - **정성평가**  
+  - 캐릭터 일관성, 자연스러움, 창의성 측면에서 LLM이 얼마나 답변을 잘 주는지 정성적으로 평가
 <img src="Picture Folder/메구밍답변1_스토리질문.png" alt="Inference_스토리질문" width="750"/>
 <img src="Picture Folder/메구밍답변2_추론질문.png" alt="Inference_추론질문" width="750"/>
-
-- **사용자 피드백**  
-  - 테스트 참여자의 **98%**가 메구밍 캐릭터 표현에 만족  
-  - 팬 커뮤니티 내 실험적 활용 성공  
-
-- **기술적 혁신**  
-  - QLoRA를 활용한 캐릭터 특화 모델 훈련  
-  - 학습 효율성 증대 및 메모리 사용 최적화  
 
 ## 🚀 향후 계획  
 - **다중 캐릭터 지원**  
