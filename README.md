@@ -30,7 +30,13 @@
   - 캐릭터의 대사와 폭렬마법 테마를 정확히 반영
   - 영어 및 한국어 대화 지원
 
-## 🎯 주요 성과
+## 🎯 주요 성과 및 평가
+- **말투 유지**  
+  - 어미, 키워드 등 해당 페르소나의 말투를 잘 유지하고 있는지 평가
+  - 메구밍은 존댓말을 주로 사용하는 캐릭터이기에 한국어 존댓말 분류 모델을 활용해 평가
+  - 평가 결과 : 100% 존댓말
+<img src="Picture Folder/honorific.png" alt="Honorific 평가" width="450"/>
+
 <img src="Picture Folder/메구밍답변1_스토리질문.png" alt="Inference_스토리질문" width="750"/>
 <img src="Picture Folder/메구밍답변2_추론질문.png" alt="Inference_추론질문" width="750"/>
 <img src="Picture Folder/humaneval.png" alt="HumanEval Benchmark Score" width="750"/>
