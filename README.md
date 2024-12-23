@@ -33,7 +33,7 @@
 ## 🎯 주요 성과
 <img src="Picture Folder/메구밍답변1_스토리질문.png" alt="Inference_스토리질문" width="750"/>
 <img src="Picture Folder/메구밍답변2_추론질문.png" alt="Inference_추론질문" width="750"/>
-<img src="Picture Folder/hellaswag.png" alt="HellaSwag Benchmark Score" width="750"/>
+<img src="Picture Folder/humaneval.png" alt="HumanEval Benchmark Score" width="750"/>
 
 - **메구밍의 재현성**  
   - 대화 맥락 정확도: **90% 이상**
