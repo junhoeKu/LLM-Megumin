@@ -1,5 +1,6 @@
 - 메구밍 데이터
   - augmented_data.json
+  - 메구밍 qa dataset.txt
   
 - 루시 5 데이터
   - augmented_Lucy5_English_1220.json
