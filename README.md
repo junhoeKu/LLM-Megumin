@@ -59,17 +59,16 @@
   - 동일 애니메이션의 다른 캐릭터 데이터셋 추가 훈련  
 - **고급 대화 생성**  
   - 스토리텔링 중심의 대화 생성 기능 강화  
-- **팬과의 협업**  
-  - 팬 커뮤니티와의 협력으로 데이터셋 확장 및 피드백 반영  
 - **언어 확장**  
   - 일본어 및 기타 언어로의 다국어 모델 훈련  
 
 ## 📚 참조  
 - **훈련 데이터**: *'이 멋진 세계에 축복을!'* 애니메이션 및 소설 데이터  
-- **모델 기술**: Hugging Face Transformers, Llama 기반 모델  
+- **모델 기술**: Hugging Face Transformers, Qwen 기반 모델  
 - **참고 논문 및 자료**:  
   - [Efficient Fine-Tuning of Language Models](https://arxiv.org/abs/2106.09685)  
-  - [LoRA: Low-Rank Adaptation of Large Language Models](https://arxiv.org/abs/2106.09685)  
+  - [LoRA: Low-Rank Adaptation of Large Language Models](https://arxiv.org/abs/2106.09685)
+  - [Emotional RAG: Enhancing Role-Playing Agents through Emotional Retrieval](https://arxiv.org/abs/2410.23041)
   - Namu Wiki의 메구밍 프로필  
 
 **🎉 메구밍과의 인터랙션을 경험하고 싶다면 기여를 환영합니다!**
