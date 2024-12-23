@@ -1,5 +1,5 @@
 - 메구밍 데이터
-
+  - augmented_data.json
   
 - 루시 5 데이터
   - augmented_Lucy5_English_1220.json
