@@ -37,14 +37,15 @@
   - 평가 결과 : 100% 존댓말
 <img src="Picture Folder/honorific.png" alt="Honorific 평가" width="450"/>
 
+- **스토리 이해(주관적 평가)**  
+  - 에피소드 질문에 적절한 인물과 상황을 답변하는지 평가
+  - Hit Rates, BLEURT 등 답지 제작 후 얼마나 답지와 유사한지 비교하는 방식으로 평가 
+  - 평가 결과 : 다른 평가지표도 준수했지만 특히 Hit Rates에서 눈에 띄는 성능을 보임 (RAG의 영향)
+<img src="Picture Folder/leaderboard.png" alt="Persona Leaderboard Score" width="750"/>
+ 
 <img src="Picture Folder/메구밍답변1_스토리질문.png" alt="Inference_스토리질문" width="750"/>
 <img src="Picture Folder/메구밍답변2_추론질문.png" alt="Inference_추론질문" width="750"/>
 <img src="Picture Folder/humaneval.png" alt="HumanEval Benchmark Score" width="750"/>
-
-- **말투 유지**  
-  - 어미, 키워드 등 해당 페르소나의 말투를 잘 유지하고 있는지 평가
-  - 메구밍은 존댓말을 주로 사용하는 캐릭터이기에 한국어 존댓말 분류 모델을 활용해 평가
-  - 평가 결과 : 100% 존댓말
 
 - **사용자 피드백**  
   - 테스트 참여자의 **98%**가 메구밍 캐릭터 표현에 만족  
