@@ -42,10 +42,15 @@
   - Hit Rates, BLEURT 등 답지 제작 후 얼마나 답지와 유사한지 비교하는 방식으로 평가 
   - 평가 결과 : 다른 평가지표도 준수했지만 특히 Hit Rates에서 눈에 띄는 성능을 보임 (RAG의 영향)
 <img src="Picture Folder/leaderboard.png" alt="Persona Leaderboard Score" width="750"/>
+
+- **맥락이해(객관적 평가)**  
+  - 기존 LLM을 평가하는 벤치마크 데이터셋 참고
+  - 자연어 추론, 인간성 등을 평가하고자 했고 특히 Role-Play Task에 중요한 복잡한 계산능력, HumanEval Benchmark 활용하여 평가
+  - 평가 결과 : RAG 활용으로 캐릭터 페르소나를 유지하면서도 복잡한 질문에 원활히 답변, 최대한의 성능 유지
+<img src="Picture Folder/humaneval.png" alt="HumanEval Benchmark Score" width="750"/>
  
 <img src="Picture Folder/메구밍답변1_스토리질문.png" alt="Inference_스토리질문" width="750"/>
 <img src="Picture Folder/메구밍답변2_추론질문.png" alt="Inference_추론질문" width="750"/>
-<img src="Picture Folder/humaneval.png" alt="HumanEval Benchmark Score" width="750"/>
 
 - **사용자 피드백**  
   - 테스트 참여자의 **98%**가 메구밍 캐릭터 표현에 만족  
